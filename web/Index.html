@@ -1,0 +1,246 @@
+<!--Started to create the doctype html document-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Name that you can see at the navigation pad-->  
+  <title>Welcome to the 80's</title>
+<!-- This is the link to acces to the css sheet-->
+<link rel="stylesheet" href="Style.css">
+<!--The following links is to import the icon with free copyright from the "Boxicon website"-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+
+<body>
+
+
+
+
+<!--The body contain all the information and structure of the html fyle-->
+<!-- we set up the "NavBar" configuration, is essential for organizing links and providing easy access
+to differents sections of the website.-->
+
+<header>
+<!--We use the "a" to refers s hyperlinks-->  
+  <a href="#" class="logo">
+<!--We imported our logo like a png picture, from the folder-->    
+    <img src="logo.png" alt="logo">
+      
+  </a>
+<!--We imported the "menu icon" for the boxicon hyperlink-->
+<i class='bx bx-menu' id='menu-icon'></i>  
+<!--Links imported-->
+<!--the <ul> and <li> are the elements to create a list of  links, in this case
+  for the menu pads-->
+<ul class="navbar">
+
+   <li><a href="#home">Home</a></li>
+   <li><a href="#about">About us</a></li>
+   <li><a href="#products">Products</a></li>
+   <li><a href="#contact us">Contact us</a></li>
+</ul>
+<!--we import the shopping cart and the search icon from the boxicon-->
+<!--We copied the "svg code" from the  boxicon website-->
+<div class="header-icon">
+  
+  <i class='bx bx-cart-alt' alt="cart" ></i>
+  <i class='bx bx-search' id='search-icon' alt="search"></i> 
+</div>
+<!--We set up the "search box"-->
+<div class="search-box">
+    <input type="search" name="" placeholder="Search here...">
+</div>
+</header>
+<!-- We configured the "home" section-->
+<section class="home" id="home">
+<!--We wrote the tittle and the principal text in the main page-->  
+  <div class="home-text">
+     <h1>Welcome to the <br> fabulous 80s! </h1>
+
+     <p>Step into the past and relive the era <br> by buying nostalgic objects. <br> 
+      Additionally, you can attend music events <br> or activities that transport you <br> back in time. </p>
+
+     
+  </div>
+</section>
+<!--We import a picture from our gallery, supeuestamente va una imagen-->
+
+<!-- We configured the "about us" section-->
+
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="retrowall.jpg" alt="">
+  </div>
+  <div class="about-text">
+    <h2>About us</h2>
+        <p>Hey there! Let's take a trip back in time to the vibrant decade of the 1980s, 
+          when we saw significant changes in fashion and music.<br> 
+          During this era, shopping trends and the retail industry underwent a transformation.<br>
+          We created this shop store to bring you a nostalgic time to remember the amazing 80s.<br> 
+          If you are young and you want to feel how your parents enjoyed their teen life, 
+          this is the best site for you.</p>
+         
+  </div>
+</section>
+<!-- We configured the "products" section-->
+<section class="products" id="products">
+  <div class="heading">
+     <h2>Our PopularProducts</h2>
+  </div>
+<!--We set up the conteinar of the products-->
+<!-- the first product-->
+  <div class="products-container">
+     <div class="box">
+       <img src="computer.jpg" alt="computer">
+        <h3>Vintage Computer</h3>
+        <div class="content">
+          <span>€200</span>
+          <a href="#">Add to cart</a>
+        </div>
+     </div>
+<!-- the second product-->
+     <div class="box">
+      <img src="calculator.jpg" alt="calculator">
+       <h3>Casio Calculator</h3>
+       <div class="content">
+         <span>€50</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+<!-- the third product-->
+    <div class="box">
+      <img src="compact camera.jpg" alt="camera">
+       <h3>Retro Camera</h3>
+       <div class="content">
+         <span>€100</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+<!-- the fourth product-->    
+    <div class="box">
+      <img src="console.png" alt="atari">
+       <h3>Atari Console</h3>
+       <div class="content">
+         <span>€80</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+<!-- the fifth product-->
+    <div class="box">
+      <img src="casio watch-.jpg" alt="watch">
+       <h3>Casio Silver Watch</h3>
+       <div class="content">
+         <span>€180</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+<!-- the sixth product-->
+    <div class="box">
+      <img src="casettes.jpg" alt="cassette">
+       <h3>TDK Cassette</h3>
+       <div class="content">
+         <span>€10</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+<!-- the seventh product-->
+    <div class="box">
+      <img src="games.jpg" alt="games">
+       <h3>Games Cartridges</h3>
+       <div class="content">
+         <span>€25</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+<!-- the eighth product-->
+    <div class="box">
+      <img src="radio.jpg" alt="radio">
+       <h3>Radio</h3>
+       <div class="content">
+         <span>€100</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+<!-- the ninth product-->
+    <div class="box">
+      <img src="sony walkman.jpg" alt="walkman">
+       <h3>Sony Walkman</h3>
+       <div class="content">
+         <span>€130</span>
+         <a href="#">Add to cart</a>
+       </div>
+    </div>
+
+
+
+  </div>
+</section>
+<!--"Contact US" section-->
+<section class="Contact_Us" id="contact us">
+  <div class="heading">
+    <div class="contact-container">  
+    <h2>Contact Us</h2>
+    <input type="name" name="name" placeholder="Type your name here">
+    <input type="phone" name="phone" placeholder="Type your phone number here">
+    <input type="email" name="email" placeholder="Type your email here">
+    <textarea name="" id="" cols="40" rows="8" placeholder="Write your message here"></textarea>
+    <input type="Submit" onclick="submitform()"  value="Submit" class="submit-button">
+
+    </div>
+  </div>
+</section>
+<!--the footer-->
+<section class="footer">
+   <div class="footer-box">
+    <h2>Retro80's</h2>
+    <p>Follow us in our social media:</p>
+       <div class="social">
+         <a href="#"><i class='bx bxl-facebook' ></i></a>
+         <a href="#"><i class='bx bxl-instagram'></i></a>
+         <a href="#"><i class='bx bxl-tiktok'></i></a>
+         <a href="#"><i class='bx bxl-youtube'></i></a>
+        
+       </div>
+   </div>
+
+   <div class="footer-box">
+    <h3>Customer Service</h3>
+    <li><a href="#">Support</a></li>
+    <li><a href="#">Return Policy</a></li>
+    <li><a href="#">Terms of Use</a></li>
+    <li><a href="#">Copyright Information</a></li>
+   </div>
+
+ 
+<!--Copyright section-->
+<div class="copyright">
+ 
+  <p>&#169; Diego Gosalvez 2023192 All Right Reserved - Dublin 2024 </p>
+    
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+  <!--This is the link to acces to the JavaScript sheet-->
+  <script src="Main.js"></script>
+</body>
+</html>

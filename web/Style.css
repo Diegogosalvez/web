@@ -1,0 +1,412 @@
+/* We import from Google Font, the font that we used in the website*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+/* We set the configuration and the structure of the imported font */
+*{
+  font-family: "Comfortaa", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 4rem; /* "rem" is the font size of the element */
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  
+  
+}
+/* variables */
+/*The variable "root" is a tool that allows to set background color for the entire html document */
+:root{
+  --main-color:rgba(221, 154, 165, 0.904); /* color of the highlight */
+  --second-color:gold; /* second option of color */
+  --text-color: cyan;  /* color of the header, the top of the scream */
+  --bg-color: black;  /* the color of the font */
+  --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%); /* box shadow configuration */
+
+/* use the "img" to ensure that all the images occuppy the full widht of their container element */  
+}
+section{
+  padding: 50px 100px;
+}
+
+img{
+  width:30%;
+}
+
+/* to define the values of the sylesheet */
+body{
+  color: var(--bg-color);
+}
+/* this is the section on the top of the website, the logo, menu options and menu, cart
+and search icon are the elements that is shown in this section */
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 100px;
+  transition: 0.5s linear;
+  background: var(--text-color);
+  
+}
+
+.logo img{
+  width: 60px;
+}
+/* we configurate the display of the menu options */
+.navbar{
+  display: flex;
+}
+.navbar a{
+  padding: 8px 17px;
+  color: var(--bg-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  
+}
+.navbar a:hover{
+  background: var(--main-color);
+  border-radius: 0.2rem;
+  transition: 0.4s all linear;
+}
+/* we configurate the style of the icons */
+.header-icon{
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  column-gap: 0.8rem;  
+}
+
+/* voy a poner el hover como en el video pero lo voy a quitar luego por que no me sale */
+.header-icon .bx{
+  color: var(--bg-color);
+  transition: 0.4s;
+}
+.header-icon .bx:hover{
+  color: var(--main-color);
+}
+#menu-icon{
+  color: var(--bg-color);
+  font-size: 24px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+
+}
+/* we configured the "search box" */
+.search-box{
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%);
+  background: var(--main-color);
+  width: 100%;
+}
+.search-box.active{
+  top: 110%;
+  box-shadow: var(--box-shadow);
+  transition: 0.2s all linear;
+}
+
+.search-box input{
+  padding: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--bg-color);
+}
+.search-box input ::placeholder{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.home{
+  width: 100%;
+  min-height: 100vh;
+  background: url(orange.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+  align-items: center;
+  gap: 1.5rem;
+
+}
+.home-text h1{
+padding-top: 85px;  
+font-size: 3rem;
+color: var(--bg-color);
+text-transform: uppercase;
+letter-spacing: 1.2px;
+}
+.home-text p{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--bg-color);
+  margin: 0.5rem 0 1.4rem;
+}
+.btn{
+  padding: 10px 60px;
+  border-radius: 0.3rem;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-weight: 500;
+}
+.btn:hover{
+  background: white;
+  transition: 0.4s;
+}
+.about{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+  align-items: center;
+  gap: 1.5rem;
+  background: url(wall3.jpg);
+}
+.about-img img{
+  border-radius: 0.5rem; /* we can change the sixe of the image */
+  width: 100%;
+}
+.about-text h2{
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.about-text p{
+  font-size: 1.4rem;
+  margin: 0.5rem 0 1.1rem;
+  font-weight: bold;
+}
+.heading{
+  text-align: center;
+}
+.heading h2{
+font-size: 2.5rem;
+text-transform: uppercase;
+}
+/* start to define the style of the products */
+.products-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  
+}
+.products-container .box{
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+.products-container img{
+  width: 100%; /* jugar con el size */
+  height: 300px;
+  object-position: center;
+  padding: 15px; /* jugar con el borde de los objetos */
+  background: white ;
+  border-radius: 1.5rem;
+}
+.products-container .box{
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0.5rem 0 0.5rem;
+}
+.products-container .box .content{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.products-container .box .content span{
+  padding: 0.4rem;
+  color: var(--bg-color);
+  background: var(--second-color);
+  border: 5px;
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+.products-container .box .content a{
+  padding: 0.4rem;
+  color: var(--bg-color);
+  border: 2px solid var(--text-color);
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+.products-container .box .content a:hover{
+  background: var(--text-color);
+  color: white;
+  transition: 0.4s all linear;
+}
+
+
+.contact-container{
+  max-width: 500px;
+  margin:auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--second-color);
+  box-shadow: var(--box-shadow); 
+  border-radius: 0.3rem; 
+  overflow: hidden;
+  padding: 20px;
+}
+.contact-container input, textarea{
+ width: 100%;
+ border: none;
+ outline: none;
+ background: white; 
+ border-radius: 0.2rem;
+ font-size: 1rem;
+}
+.contact-container textarea{
+  resize: none;
+  height: 200px;
+}
+
+
+.contact-container .submit-button{
+  border:none;
+  outline: none;
+  background: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.contact-container .submit-button:hover{
+  background: var(--text-color);
+  color: white;
+  transition: 0.4s all linear;
+}
+
+
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer-box{
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.footer-box p{
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.social{
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.social a .bx{
+  font-size: 30px;
+  color: white;
+  padding: 0.2rem;
+  background: var(--text-color);
+  border-radius: 0.4rem;
+}
+.social a .bx:hover{
+  background: var(--second-color);
+  color:var(--main-color);
+  transition: 0.4s all linear;
+}
+.footer-box h3{
+  color: var(--bg-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.footer-box li a{
+color: var(--text-color);
+font-weight: 600;
+}
+.footer-box li a:hover{
+  color: var(--main-color);
+}
+.copyright{
+  color: var(--bg-color);
+  text-align: center;
+}
+@media (max-width:1058px){
+  header{
+    padding: 16px 60px;
+  }
+  section{
+    padding: 50px 60px;
+  }
+  .home-text h1{
+    font-size: 2.4rem;
+  }
+}
+@media (max-width:991px){
+  header{
+    padding: 16px 4%;
+  }
+  section{
+    padding: 50px 4%;
+  }
+  .home-text h1{
+    font-size: 2rem;
+  }
+}
+@media (max-width:768px){
+  header{
+    padding: 12px 4%;
+  }
+  #menu-icon {
+    display: initial;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%; /* mantener 100% por mientras, si funciona el menu poner a -570px */
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--text-color);
+    row-gap: 1.4rem;
+    transition: 0.3s;
+    text-align: center;
+
+  }
+}
+.navbar a{
+  color: var(--bg-color);
+}
+.navbar a:hover{
+  color:white;
+}
+.navbar .active{
+  top: 100%;
+}
+.about{
+  align-items: center;
+}
+
+@media (max-width:360px){
+  header{
+    padding: 9px 4%;
+  }
+  .logo img{
+    width: 45px;
+  } 
+  .home-text{
+    padding-top: 15px;
+  }
+}
